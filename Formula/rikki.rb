@@ -1,6 +1,5 @@
-# Canonical copy lives in guygrigsby/homebrew-tap (Formula/rikki.rb); this
-# is the bootstrap template. The release workflow bumps the tap's version
-# line on every tag, so the two stay in sync without hands.
+# Bumped automatically by the rikki release workflow on every tag; the
+# bootstrap template lives in guygrigsby/rikki (packaging/homebrew/).
 class Rikki < Formula
   desc "Interpreted language with Go's discipline and CPython's ecosystem"
   homepage "https://github.com/guygrigsby/rikki"
@@ -12,7 +11,8 @@ class Rikki < Formula
   def install
     python = Formula["python@3.12"].opt_bin/"python3.12"
     system python, "-m", "venv", libexec
-    system libexec/"bin/pip", "install", "--no-cache-dir", "rikki==#{version}"
+    # the PyPI name is rikki-lang (bare rikki was taken); binaries stay rikki/tk
+    system libexec/"bin/pip", "install", "--no-cache-dir", "rikki-lang==#{version}"
     bin.install_symlink libexec/"bin/rikki", libexec/"bin/tk"
   end
 
