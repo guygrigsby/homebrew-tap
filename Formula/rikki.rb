@@ -3,7 +3,7 @@
 class Rikki < Formula
   desc "Interpreted language with Go's discipline and CPython's ecosystem"
   homepage "https://github.com/guygrigsby/rikki"
-  version "0.1.0"
+  version "0.1.3"
   # no url: the wheel comes from PyPI below, tagged for the pinned python
   depends_on "python@3.12"
   depends_on "uv" => :recommended # rikki py add drives uv
