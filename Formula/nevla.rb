@@ -4,7 +4,7 @@
 class Nevla < Formula
   desc "Interpreted language with Go's discipline and CPython's ecosystem"
   homepage "https://github.com/guygrigsby/nevla"
-  version "0.2.0"
+  version "0.2.1"
   # no url: the wheel comes from PyPI below, tagged for the pinned python
   depends_on "python@3.12"
   depends_on "uv" => :recommended # nevla py add drives uv
